@@ -1,0 +1,955 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Belser Olivera Vásquez · Arquitecto de Software y Full Stack Senior</title>
+<meta name="description" content="Ingeniero de Sistemas e Informática con 10 años de experiencia: arquitectura de software, Java, Spring Boot, Angular, apps móviles con Flutter y Kotlin, inteligencia artificial, datos y DevOps. Lima, Perú.">
+<meta name="author" content="Belser Olivera Vásquez">
+<link rel="canonical" href="https://u18303221.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:locale" content="es_PE">
+<meta property="og:title" content="Belser Olivera Vásquez · Arquitecto de Software y Full Stack Senior">
+<meta property="og:description" content="Diez años diseñando y construyendo sistemas de punta a punta: arquitectura, backend, frontend, móvil, IA, datos e infraestructura.">
+<meta property="og:url" content="https://u18303221.github.io/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#eef2f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1622" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2314233a'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-weight='800' font-size='38' fill='%23eef2f1'%3EB%3C/text%3E%3Ccircle cx='47' cy='45' r='5' fill='%23b79af2'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Belser Olivera Vásquez",
+  "jobTitle": "Arquitecto de Software y Desarrollador Full Stack Senior",
+  "url": "https://u18303221.github.io/",
+  "email": "mailto:belser.olivera@hotmail.com",
+  "sameAs": ["https://www.linkedin.com/in/belserolivera/"],
+  "alumniOf": {"@type": "CollegeOrUniversity", "name": "Universidad Tecnológica del Perú"},
+  "address": {"@type": "PostalAddress", "addressLocality": "Lima", "addressCountry": "PE"},
+  "knowsAbout": ["Software Architecture", "Microservices", "Microfrontends", "Java", "Spring Boot", "Angular", "TypeScript", "Flutter", "Kotlin", "Artificial Intelligence", "LangChain", "RAG", "PostgreSQL", "Oracle", "SQL Server", "Docker", "Kubernetes", "Jenkins", "CI/CD", "DevOps"]
+}
+</script>
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+:root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+body { margin: 0; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+/* Layout: la trayectoria se lee como una partida registral; cada empleo es un asiento en una fila de libro (código y fechas a la izquierda, contenido a la derecha). */
+:root {
+  --papel: #eef2f1;
+  --hoja: #fbfcfc;
+  --tinta: #14233a;
+  --tinta-suave: #4b5b6e;
+  --linea: #c5d0d4;
+  --trama: #dfe7e8;
+  --sello: #6a3fb5;
+  --sello-suave: #6a3fb51a;
+
+  --f-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --f-texto: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --f-dato: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+  --t-xs: 0.75rem;
+  --t-s: 0.875rem;
+  --t-m: 1rem;
+  --t-l: 1.25rem;
+  --t-xl: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+  --t-xxl: clamp(2.6rem, 1.6rem + 4.6vw, 5.25rem);
+
+  --ancho: 68rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --papel: #0e1622;
+    --hoja: #142032;
+    --tinta: #e4eaf1;
+    --tinta-suave: #9aa9ba;
+    --linea: #2a3a4f;
+    --trama: #18263a;
+    --sello: #b79af2;
+    --sello-suave: #b79af21f;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --papel: #0e1622;
+  --hoja: #142032;
+  --tinta: #e4eaf1;
+  --tinta-suave: #9aa9ba;
+  --linea: #2a3a4f;
+  --trama: #18263a;
+  --sello: #b79af2;
+  --sello-suave: #b79af21f;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--papel);
+  color: var(--tinta);
+  font-family: var(--f-texto);
+  font-size: var(--t-m);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px);
+  z-index: 10;
+  background: var(--papel);
+}
+a { color: inherit; }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--sello);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.envoltura {
+  max-width: var(--ancho);
+  margin-inline: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.dato {
+  font-family: var(--f-dato);
+  font-size: var(--t-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+}
+
+/* Cabecera */
+.cabecera {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 5;
+  background: var(--papel);
+  border-bottom: 1px solid var(--linea);
+}
+.cabecera .envoltura {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.85rem;
+}
+.marca {
+  font-family: var(--f-display);
+  font-weight: 800;
+  font-size: var(--t-l);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+.marca span { color: var(--sello); }
+.menu {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: var(--t-s);
+}
+.menu a { text-decoration: none; color: var(--tinta-suave); }
+.menu a:hover { color: var(--tinta); }
+@media (max-width: 640px) { .menu li:not(:last-child) { display: none; } }
+
+/* Portada */
+.portada {
+  border-bottom: 1px solid var(--linea);
+  background-image:
+    repeating-linear-gradient(115deg, var(--trama) 0 1px, transparent 1px 9px),
+    repeating-linear-gradient(65deg, var(--trama) 0 1px, transparent 1px 9px);
+  background-size: 100% 100%;
+}
+.portada .envoltura {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2.5rem;
+  align-items: center;
+  padding-block: clamp(3rem, 2rem + 5vw, 6rem);
+}
+.portada-texto { min-width: 0; display: grid; gap: 1.25rem; }
+.portada h1 {
+  margin: 0;
+  font-family: var(--f-display);
+  font-weight: 800;
+  font-size: var(--t-xxl);
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+.portada .cargo {
+  margin: 0;
+  font-family: var(--f-display);
+  font-weight: 500;
+  font-size: var(--t-xl);
+  color: var(--sello);
+}
+.portada .tesis {
+  margin: 0;
+  max-width: 36rem;
+  font-size: var(--t-l);
+  line-height: 1.55;
+  background: var(--papel);
+}
+.acciones { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.boton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.15rem;
+  border: 1.5px solid var(--tinta);
+  font: 600 var(--t-s) var(--f-texto);
+  text-decoration: none;
+  cursor: pointer;
+  background: var(--tinta);
+  color: var(--papel);
+  transition: transform 160ms ease-out;
+}
+.boton:hover { transform: translateY(-1px); }
+.boton:active { transform: translateY(0); }
+.boton.secundario { background: var(--hoja); color: var(--tinta); }
+.ficha {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+  margin: 0.5rem 0 0;
+  padding: 0;
+}
+.ficha div { display: grid; gap: 0.1rem; }
+.ficha dt { font-family: var(--f-dato); font-size: var(--t-xs); letter-spacing: 0.06em; text-transform: uppercase; color: var(--tinta-suave); }
+.ficha dd { margin: 0; font-weight: 600; font-size: var(--t-s); }
+
+.sello {
+  width: 11.5rem;
+  aspect-ratio: 1;
+  max-width: 100%;
+  border: 3px solid var(--sello);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  gap: 0.15rem;
+  color: var(--sello);
+  background: var(--sello-suave);
+  transform: rotate(-9deg);
+  box-shadow: inset 0 0 0 6px var(--papel), inset 0 0 0 7.5px var(--sello);
+  animation: estampar 260ms cubic-bezier(0.2, 0.8, 0.2, 1) 200ms both;
+}
+.sello b { font-family: var(--f-display); font-size: 2.6rem; line-height: 1; letter-spacing: -0.03em; }
+.sello span { font-family: var(--f-dato); font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; }
+@keyframes estampar {
+  from { transform: rotate(-9deg) scale(1.18); }
+  to { transform: rotate(-9deg) scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sello { animation: none; }
+  .boton { transition: none; }
+}
+@media (max-width: 760px) {
+  .portada .envoltura { grid-template-columns: 1fr; }
+  .sello { width: 8.5rem; order: -1; justify-self: end; margin-bottom: -1.5rem; }
+  .sello b { font-size: 1.9rem; }
+  .sello span { font-size: 0.58rem; }
+}
+
+/* Secciones */
+.seccion { padding-block: clamp(3rem, 2rem + 3vw, 5rem); border-bottom: 1px solid var(--linea); }
+.seccion-cabeza {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+  margin-bottom: 2rem;
+}
+.seccion h2 {
+  margin: 0;
+  font-family: var(--f-display);
+  font-weight: 700;
+  font-size: var(--t-xl);
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+.seccion-cabeza p { margin: 0; max-width: 32rem; color: var(--tinta-suave); font-size: var(--t-s); }
+
+/* Asientos */
+.asientos { list-style: none; margin: 0; padding: 0; border-top: 1.5px solid var(--tinta); }
+.asiento {
+  display: grid;
+  grid-template-columns: 12rem minmax(0, 1fr);
+  gap: 1rem 2.5rem;
+  padding-block: 1.75rem;
+  border-bottom: 1px dashed var(--linea);
+}
+.asiento-margen { display: grid; align-content: start; gap: 0.35rem; }
+.asiento-codigo { font-family: var(--f-dato); font-size: var(--t-xs); font-weight: 500; letter-spacing: 0.08em; color: var(--sello); }
+.asiento-fechas { font-family: var(--f-dato); font-size: var(--t-s); font-variant-numeric: tabular-nums; }
+.asiento-cuerpo { min-width: 0; display: grid; gap: 0.6rem; }
+.asiento h3 { margin: 0; font-family: var(--f-display); font-weight: 700; font-size: var(--t-l); letter-spacing: -0.01em; }
+.asiento .entidad { margin: 0; font-weight: 500; color: var(--tinta-suave); }
+.asiento ul { margin: 0; padding-left: 1.1rem; max-width: 42rem; display: grid; gap: 0.35rem; }
+.asiento li::marker { color: var(--sello); }
+.asiento.breve h3 { font-size: var(--t-m); }
+.etiquetas { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.25rem 0 0; padding: 0; list-style: none; }
+.etiquetas li {
+  font-family: var(--f-dato);
+  font-size: var(--t-xs);
+  padding: 0.15rem 0.5rem;
+  border: 1px solid var(--linea);
+  background: var(--hoja);
+}
+.pendiente {
+  display: inline-block;
+  margin-left: 0.4rem;
+  font-family: var(--f-dato);
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.05rem 0.4rem;
+  border: 1px dashed var(--sello);
+  color: var(--sello);
+  vertical-align: middle;
+}
+@media (max-width: 700px) {
+  .asiento { grid-template-columns: 1fr; gap: 0.75rem; }
+  .asiento-margen { grid-auto-flow: column; justify-content: start; gap: 1rem; align-items: baseline; }
+}
+
+/* Proyectos */
+.seccion.proyectos-seccion h2 { font-size: clamp(2.2rem, 1.4rem + 3.4vw, 4rem); line-height: 1; letter-spacing: -0.035em; }
+.filtros { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 1.75rem; padding: 0; list-style: none; }
+.filtro {
+  font: 500 var(--t-s) var(--f-dato);
+  padding: 0.5rem 0.95rem;
+  border: 1.5px solid var(--linea);
+  background: transparent;
+  color: var(--tinta-suave);
+  cursor: pointer;
+  transition: border-color 150ms ease-out, color 150ms ease-out;
+}
+.filtro:hover { border-color: var(--tinta); color: var(--tinta); }
+.filtro[aria-pressed="true"] { background: var(--tinta); border-color: var(--tinta); color: var(--papel); }
+.filtro small { font-size: var(--t-xs); opacity: 0.7; margin-left: 0.3rem; }
+
+.proyectos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+@media (max-width: 1060px) { .proyectos { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.proyecto {
+  display: grid;
+  align-content: start;
+  gap: 0.9rem;
+  padding: clamp(1.5rem, 1rem + 1.5vw, 2.25rem);
+  background: var(--hoja);
+  border: 1px solid var(--linea);
+  transition: border-color 160ms ease-out, transform 160ms ease-out;
+}
+.proyecto:hover { border-color: var(--tinta); transform: translateY(-2px); }
+.proyecto-cabeza { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 1rem; }
+.proyecto-codigo { font-family: var(--f-dato); font-size: var(--t-xs); font-weight: 500; letter-spacing: 0.08em; color: var(--sello); }
+.proyecto h3 { margin: 0; font-family: var(--f-display); font-weight: 800; font-size: var(--t-xl); line-height: 1.1; letter-spacing: -0.025em; text-wrap: balance; }
+.proyecto p { margin: 0; max-width: 40rem; }
+.proyecto .logros { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.3rem; font-size: var(--t-s); }
+.proyecto .logros li::marker { color: var(--sello); }
+.proyecto .estado { font-family: var(--f-dato); font-size: var(--t-xs); color: var(--sello); }
+
+@media (max-width: 700px) { .proyectos { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) {
+  .proyecto, .filtro { transition: none; }
+  .proyecto:hover { transform: none; }
+}
+
+/* Stack */
+.stack { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.25rem 2rem; }
+.stack .practicas, .stack .ancho { grid-column: 1 / -1; }
+.stack .practicas ul, .stack .ancho ul { display: flex; flex-wrap: wrap; gap: 0.35rem 1.75rem; }
+.stack strong { font-weight: 600; }
+.antes { margin: 1.25rem 0 0; }
+.stack h3 { margin: 0 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 1.5px solid var(--tinta); font-family: var(--f-dato); font-size: var(--t-xs); font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; }
+.stack ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.35rem; font-size: var(--t-s); }
+@media (max-width: 900px) { .stack { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 460px) { .stack { grid-template-columns: 1fr; } }
+
+.formacion { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.formacion div { padding-top: 0.75rem; border-top: 1px dashed var(--linea); display: grid; gap: 0.2rem; }
+.formacion strong { font-weight: 600; }
+.formacion span { font-size: var(--t-s); color: var(--tinta-suave); }
+@media (max-width: 640px) { .formacion { grid-template-columns: 1fr; } }
+
+/* Contacto */
+.contacto { border-bottom: 0; }
+.contacto .envoltura { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 2.5rem; align-items: start; }
+.contacto h2 { font-size: clamp(1.9rem, 1.3rem + 2.4vw, 3rem); line-height: 1.05; }
+.contacto .lead { margin: 1rem 0 0; max-width: 30rem; color: var(--tinta-suave); }
+.canales { display: grid; gap: 0.75rem; }
+.canal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.15rem;
+  background: var(--hoja);
+  border: 1px solid var(--linea);
+  min-width: 0;
+}
+.canal > div { min-width: 0; display: grid; }
+.canal .valor { font-family: var(--f-dato); font-size: var(--t-s); overflow-wrap: anywhere; user-select: all; }
+.canal a.valor { text-decoration-color: var(--linea); text-underline-offset: 3px; user-select: auto; }
+.copiar {
+  flex: none;
+  font: 500 var(--t-xs) var(--f-dato);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid var(--tinta);
+  background: transparent;
+  color: var(--tinta);
+  cursor: pointer;
+}
+@media (max-width: 760px) { .contacto .envoltura { grid-template-columns: 1fr; } }
+
+.pie .envoltura {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+  padding-block: 1.5rem 2.5rem;
+  border-top: 1.5px solid var(--tinta);
+}
+</style>
+</head>
+<body>
+
+<header class="cabecera">
+  <div class="envoltura">
+    <a class="marca" href="#inicio">Belser<span>.</span></a>
+    <nav aria-label="Secciones">
+      <ul class="menu">
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#tecnologias">Tecnologías</a></li>
+        <li><a href="#formacion">Formación</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="portada">
+    <div class="envoltura">
+      <div class="portada-texto">
+        <p class="dato">Ingeniero de Sistemas e Informática · Lima, Perú</p>
+        <h1>Belser Olivera Vásquez</h1>
+        <p class="cargo">Arquitecto de Software · Desarrollador Full Stack Senior</p>
+        <p class="tesis">Diez años diseñando y construyendo sistemas de punta a punta: arquitectura, backend, frontend, apps móviles, inteligencia artificial, datos e infraestructura, del modelo de datos al servidor en producción.</p>
+        <div class="acciones">
+          <a class="boton" href="#contacto">Escríbeme</a>
+          <a class="boton secundario" href="#proyectos">Ver proyectos</a>
+        </div>
+        <dl class="ficha">
+          <div><dt>Experiencia</dt><dd>10 años · desde 2016</dd></div>
+          <div><dt>Rol</dt><dd>Arquitectura de software · Full Stack</dd></div>
+          <div><dt>Alcance</dt><dd>Backend · Frontend · Datos · DevOps · Móvil · IA</dd></div>
+          <div><dt>Sectores</dt><dd>Registros públicos · Estado · Medios · Comercio electrónico</dd></div>
+        </dl>
+      </div>
+      <div class="sello" aria-hidden="true">
+        <span>Full Stack</span>
+        <b>10</b>
+        <span>años</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="experiencia">
+    <div class="envoltura">
+      <div class="seccion-cabeza">
+        <h2>Experiencia</h2>
+        <p>Del puesto más reciente al más antiguo. Experiencia en entidades del Estado: SUNARP, SBN y Minedu.</p>
+      </div>
+      <ol class="asientos" reversed>
+        <li class="asiento">
+          <div class="asiento-margen">
+            <span class="asiento-codigo">Asiento 04</span>
+            <span class="asiento-fechas">oct. 2023 – actualidad</span>
+          </div>
+          <div class="asiento-cuerpo">
+            <h3>Desarrollador Full Stack</h3>
+            <p class="entidad">SUNARP · Oficina de Tecnologías de la Información</p>
+            <ul>
+              <li>SIR Minero Web (registro minero): microservicios en Spring Boot y microfrontends en Angular para la calificación de títulos y de sociedades mineras, transferencias de dominio y rectificación registral; despliegues a producción con Docker y GitLab CI.</li>
+              <li>SPRL (Publicidad Registral en Línea): Tarjeta de Identificación Vehicular Electrónica (TIVE), alerta de robo vehicular, módulo 8 UIT y reportes de Tesorería.</li>
+              <li>Interfaces de inscripción y rectificación de partidas, y visualización de títulos registrales.</li>
+              <li>SARP (consulta registral web) y Tribunal Registral (asignación de carga a las salas).</li>
+            </ul>
+            <ul class="etiquetas" aria-label="Tecnologías">
+              <li>Java</li><li>Spring Boot</li><li>Angular</li><li>Microservicios</li><li>Oracle</li><li>Docker</li><li>GitLab</li>
+            </ul>
+          </div>
+        </li>
+        <li class="asiento">
+          <div class="asiento-margen">
+            <span class="asiento-codigo">Asiento 03</span>
+            <span class="asiento-fechas">2023</span>
+          </div>
+          <div class="asiento-cuerpo">
+            <h3>Desarrollador Full Stack</h3>
+            <p class="entidad">M4G</p>
+          </div>
+        </li>
+        <li class="asiento">
+          <div class="asiento-margen">
+            <span class="asiento-codigo">Asiento 02</span>
+            <span class="asiento-fechas">ene. 2019 – dic. 2022</span>
+          </div>
+          <div class="asiento-cuerpo">
+            <h3>Desarrollador Full Stack</h3>
+            <p class="entidad">Sector público · SBN y Minedu</p>
+            <ul>
+              <li>Desarrollo y mantenimiento de aplicaciones web institucionales para la Superintendencia Nacional de Bienes Estatales y el Ministerio de Educación.</li>
+            </ul>
+            <ul class="etiquetas" aria-label="Tecnologías">
+              <li>Java</li><li>Angular</li><li>PHP / Laravel</li><li>SQL Server</li>
+            </ul>
+          </div>
+        </li>
+        <li class="asiento">
+          <div class="asiento-margen">
+            <span class="asiento-codigo">Asiento 01</span>
+            <span class="asiento-fechas">mar. 2016 – dic. 2018</span>
+          </div>
+          <div class="asiento-cuerpo">
+            <h3>Desarrollador Web</h3>
+            <p class="entidad">Grupo Panamericana de Radios</p>
+            <ul>
+              <li>Mantenimiento y evolución de los portales de Onda Cero, Radio Panamericana, Radio Cumbia Mix y Radio 1160, con streaming en vivo de las radios.</li>
+              <li>Optimización de posicionamiento y rendimiento: SEO, AMP, Artículos Instantáneos de Facebook y analítica.</li>
+              <li>Intranet corporativa y landings para concursos.</li>
+            </ul>
+            <ul class="etiquetas" aria-label="Tecnologías">
+              <li>PHP</li><li>CodeIgniter</li><li>Laravel</li><li>Vue.js</li><li>JavaScript</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+      <p class="dato antes">Antes de 2016: soporte técnico y supervisión de operaciones</p>
+    </div>
+  </section>
+
+  <section class="seccion proyectos-seccion" id="proyectos">
+    <div class="envoltura">
+      <div class="seccion-cabeza">
+        <h2>Proyectos</h2>
+        <p>Sistemas que diseñé, construí y llevé a producción: web, móvil, inteligencia artificial e infraestructura.</p>
+      </div>
+      <ul class="filtros" aria-label="Filtrar proyectos por área">
+        <li><button class="filtro" type="button" data-filtro="todos" aria-pressed="true">Todos</button></li>
+        <li><button class="filtro" type="button" data-filtro="web" aria-pressed="false">Web</button></li>
+        <li><button class="filtro" type="button" data-filtro="movil" aria-pressed="false">Móvil</button></li>
+        <li><button class="filtro" type="button" data-filtro="ia" aria-pressed="false">IA</button></li>
+        <li><button class="filtro" type="button" data-filtro="devops" aria-pressed="false">DevOps</button></li>
+      </ul>
+      <div class="proyectos">
+        <article class="proyecto" data-areas="web devops">
+          <div class="proyecto-cabeza">
+            <span class="proyecto-codigo">Título 01 · Comercio electrónico</span>
+            <span class="estado">Web · SSR</span>
+          </div>
+          <h3>Frutos de Mujer</h3>
+          <p>Comercio electrónico de un supermercado de Jaén: tienda, panel de administración y web del repartidor.</p>
+          <ul class="logros">
+            <li>Tienda con SSR para SEO, compra sin cuenta y pagos con Yape, Plin y transferencia.</li>
+            <li>Monolito modular con 12 módulos de dominio, idempotencia en el checkout y auditoría con triggers.</li>
+          </ul>
+          <ul class="etiquetas" aria-label="Tecnologías">
+            <li>Angular 22</li><li>Spring Boot 4</li><li>Spring Modulith</li><li>PostgreSQL 16</li><li>Docker</li><li>GitHub Actions</li>
+          </ul>
+        </article>
+
+        <article class="proyecto" data-areas="web devops">
+          <div class="proyecto-cabeza">
+            <span class="proyecto-codigo">Título 02 · SUNARP</span>
+            <span class="estado">Web · microservicios</span>
+          </div>
+          <h3>SIR Minero Web</h3>
+          <p>Sistema Integrado Registral Minero: unos 21 microservicios y 23 microfrontends para el registro minero nacional.</p>
+          <ul class="logros">
+            <li>Calificación de títulos y de sociedades mineras, transferencias de dominio y rectificación registral.</li>
+            <li>Integración con huellero biométrico y despliegues a producción en contenedores.</li>
+          </ul>
+          <ul class="etiquetas" aria-label="Tecnologías">
+            <li>Spring Boot 3</li><li>Java 21</li><li>Angular</li><li>single-spa</li><li>OAuth2 · JWT</li><li>Oracle</li><li>Docker</li>
+          </ul>
+        </article>
+
+        <article class="proyecto" data-areas="movil">
+          <div class="proyecto-cabeza">
+            <span class="proyecto-codigo">Título 03 · SUNARP</span>
+            <span class="estado">Android · Kotlin</span>
+          </div>
+          <h3>App SUNARP para Android</h3>
+          <p>App nativa de servicios registrales para ciudadanos, con su capa de microservicios.</p>
+          <ul class="logros">
+            <li>Consulta vehicular, consulta de propiedad, solicitudes y seguimiento de trámites.</li>
+            <li>Backend en microservicios con caché en Redis y autenticación OAuth2.</li>
+          </ul>
+          <ul class="etiquetas" aria-label="Tecnologías">
+            <li>Kotlin</li><li>Coroutines</li><li>Spring Boot</li><li>Oracle</li><li>Redis</li><li>OAuth2</li>
+          </ul>
+        </article>
+
+        <article class="proyecto" data-areas="web">
+          <div class="proyecto-cabeza">
+            <span class="proyecto-codigo">Título 04 · SUNARP</span>
+            <span class="estado">Web · servicios en línea</span>
+          </div>
+          <h3>SPRL, TIVE y alerta de robo</h3>
+          <p>Servicios de publicidad registral en línea y del registro vehicular.</p>
+          <ul class="logros">
+            <li>Tarjeta de Identificación Vehicular Electrónica (TIVE), reemplacamiento y reproceso masivo de tarjetas.</li>
+            <li>Aviso electrónico de robo vehicular, módulo 8 UIT y migración de módulos legados a Spring Boot 3.</li>
+          </ul>
+          <ul class="etiquetas" aria-label="Tecnologías">
+            <li>Spring Boot</li><li>Angular</li><li>Oracle</li><li>PostgreSQL</li><li>Redis</li><li>SOAP</li><li>Jenkins</li>
+          </ul>
+        </article>
+
+        <article class="proyecto" data-areas="ia web devops">
+          <div class="proyecto-cabeza">
+            <span class="proyecto-codigo">Título 05 · Syntax</span>
+            <span class="estado">SaaS · IA</span>
+          </div>
+          <h3>Plataforma Syntax</h3>
+          <p>Plataforma de licitaciones, documentos y suscripciones con agentes de IA que analizan y responden sobre expedientes.</p>
+          <ul class="logros">
+            <li>Orquestador de IA en Spring Boot y agentes en Python con LangChain.</li>
+            <li>12 microfrontends Angular sobre Kubernetes, con métricas y logs en Prometheus y Loki.</li>
+          </ul>
+          <ul class="etiquetas" aria-label="Tecnologías">
+            <li>LangChain</li><li>Python</li><li>Spring Boot</li><li>Angular</li><li>PostgreSQL</li><li>RabbitMQ</li><li>Kubernetes</li>
+          </ul>
+        </article>
+
+        <article class="proyecto" data-areas="ia">
+          <div class="proyecto-cabeza">
+            <span class="proyecto-codigo">Título 06 · SBN</span>
+            <span class="estado">IA · documentos</span>
+          </div>
+          <h3>Análisis documental con IA</h3>
+          <p>Lectura y consulta inteligente de expedientes sin enviar datos a proveedores externos.</p>
+          <ul class="logros">
+            <li>OCR a Markdown, indexado vectorial y búsqueda semántica sobre los documentos.</li>
+            <li>API con respuestas en streaming (SSE) y frontend en Angular.</li>
+          </ul>
+          <ul class="etiquetas" aria-label="Tecnologías">
+            <li>Python</li><li>FastAPI</li><li>pgvector</li><li>PostgreSQL 16</li><li>OCR</li><li>Spring Boot</li><li>Angular 21</li>
+          </ul>
+        </article>
+
+        <article class="proyecto" data-areas="ia web devops">
+          <div class="proyecto-cabeza">
+            <span class="proyecto-codigo">Título 07 · Syntax</span>
+            <span class="estado">SaaS · IA</span>
+          </div>
+          <h3>Chatbots con RAG</h3>
+          <p>Chatbot multiempresa con constructor visual de flujos y respuestas basadas en los documentos de cada cliente.</p>
+          <ul class="logros">
+            <li>Recuperación aumentada (RAG) con embeddings y base vectorial Qdrant.</li>
+            <li>Siete servicios, widget embebible y atención en varios canales.</li>
+          </ul>
+          <ul class="etiquetas" aria-label="Tecnologías">
+            <li>Node.js</li><li>Next.js</li><li>React</li><li>Qdrant</li><li>sentence-transformers</li><li>Redis</li><li>nginx</li>
+          </ul>
+        </article>
+
+        <article class="proyecto" data-areas="web devops">
+          <div class="proyecto-cabeza">
+            <span class="proyecto-codigo">Título 08 · SBN</span>
+            <span class="estado">Web · gestión pública</span>
+          </div>
+          <h3>Gestión documental y trámites</h3>
+          <p>Sistemas internos y servicios digitales de la Superintendencia Nacional de Bienes Estatales.</p>
+          <ul class="logros">
+            <li>Gestión Documental con plantillas dinámicas y migración de Informes Técnico Legales desde PowerBuilder.</li>
+            <li>Mesa de Partes, Casilla Electrónica, procesos judiciales y CI/CD para los pases a producción.</li>
+          </ul>
+          <ul class="etiquetas" aria-label="Tecnologías">
+            <li>Spring Boot</li><li>Laravel</li><li>Angular</li><li>SQL Server</li><li>Docker</li><li>Jenkins</li>
+          </ul>
+        </article>
+
+        <article class="proyecto" data-areas="movil">
+          <div class="proyecto-cabeza">
+            <span class="proyecto-codigo">Título 09 · SBN</span>
+            <span class="estado">Flutter · offline</span>
+          </div>
+          <h3>Inspecciones técnicas en campo</h3>
+          <p>App para levantar fichas técnicas de inmuebles en campo, aun sin conexión.</p>
+          <ul class="logros">
+            <li>Almacenamiento local y detección de conectividad para trabajar sin señal.</li>
+            <li>Integrada con la API y el panel web de fichas técnicas.</li>
+          </ul>
+          <ul class="etiquetas" aria-label="Tecnologías">
+            <li>Flutter</li><li>Dart</li><li>SQLite</li><li>Laravel</li><li>Angular</li>
+          </ul>
+        </article>
+
+        <article class="proyecto" data-areas="movil">
+          <div class="proyecto-cabeza">
+            <span class="proyecto-codigo">Título 10 · Oyeblue</span>
+            <span class="estado">Flutter · Android e iOS</span>
+          </div>
+          <h3>App de radio en vivo</h3>
+          <p>App de radio con streaming, notificaciones y monetización con publicidad.</p>
+          <ul class="logros">
+            <li>Notificaciones push con OneSignal.</li>
+            <li>Anuncios con AdMob y Facebook Audience Network.</li>
+          </ul>
+          <ul class="etiquetas" aria-label="Tecnologías">
+            <li>Flutter</li><li>Android</li><li>iOS</li><li>OneSignal</li><li>AdMob</li>
+          </ul>
+        </article>
+
+        <article class="proyecto" data-areas="ia web">
+          <div class="proyecto-cabeza">
+            <span class="proyecto-codigo">Título 11 · Medios</span>
+            <span class="estado">IA · automatización</span>
+          </div>
+          <h3>Noticias con IA</h3>
+          <p>Recolección automática de noticias, redacción con GPT-4 y publicación directa en WordPress.</p>
+          <ul class="logros">
+            <li>Caché y colas de trabajo con Redis, desplegado en contenedores.</li>
+          </ul>
+          <ul class="etiquetas" aria-label="Tecnologías">
+            <li>Node.js</li><li>OpenAI</li><li>MySQL</li><li>Redis</li><li>Docker</li>
+          </ul>
+        </article>
+
+        <article class="proyecto" data-areas="devops">
+          <div class="proyecto-cabeza">
+            <span class="proyecto-codigo">Título 12 · Infraestructura</span>
+            <span class="estado">DevOps · servidores</span>
+          </div>
+          <h3>Plataformas de despliegue y monitoreo</h3>
+          <p>Infraestructura con la que se construyen, publican y vigilan los sistemas.</p>
+          <ul class="logros">
+            <li>API Gateway con Kong, proxy de producción en nginx y clúster Kubernetes con ingress-nginx.</li>
+            <li>Jenkins con SonarQube, métricas en Prometheus y Grafana y logs centralizados con Elasticsearch, Fluentd y Kibana.</li>
+          </ul>
+          <ul class="etiquetas" aria-label="Tecnologías">
+            <li>Kubernetes</li><li>Docker</li><li>Kong</li><li>Jenkins</li><li>SonarQube</li><li>Prometheus</li><li>Grafana</li><li>EFK</li>
+          </ul>
+        </article>
+
+        <article class="proyecto" data-areas="web">
+          <div class="proyecto-cabeza">
+            <span class="proyecto-codigo">Título 13 · Grupo Panamericana</span>
+            <span class="estado">Medios digitales</span>
+          </div>
+          <h3>Portales radiales</h3>
+          <p>Sitios de Onda Cero, Radio Panamericana, Radio Cumbia Mix y Radio 1160 con streaming en vivo.</p>
+          <ul class="logros">
+            <li>Optimización para buscadores y móviles: SEO, AMP y Artículos Instantáneos de Facebook.</li>
+            <li>Intranet corporativa y landings para concursos.</li>
+          </ul>
+          <ul class="etiquetas" aria-label="Tecnologías">
+            <li>PHP</li><li>Laravel</li><li>CodeIgniter</li><li>Vue.js</li><li>SEO</li><li>AMP</li>
+          </ul>
+        </article>
+
+        <article class="proyecto" data-areas="web devops">
+          <div class="proyecto-cabeza">
+            <span class="proyecto-codigo">Título 14 · Contabilidad</span>
+            <span class="estado">Web · integraciones</span>
+          </div>
+          <h3>Zoho Books para Perú</h3>
+          <p>Extensiones que adaptan Zoho Books a la operación de empresas peruanas.</p>
+          <ul class="logros">
+            <li>Consulta de RUC y DNI y tipo de cambio de SUNAT dentro del sistema contable.</li>
+            <li>Backend propio en contenedores con CI/CD en GitHub Actions.</li>
+          </ul>
+          <ul class="etiquetas" aria-label="Tecnologías">
+            <li>Laravel 13</li><li>PHP 8.3</li><li>MariaDB</li><li>Docker</li><li>GitHub Actions</li>
+          </ul>
+        </article>
+
+        <article class="proyecto" data-areas="web">
+          <div class="proyecto-cabeza">
+            <span class="proyecto-codigo">Título 15 · Syntax</span>
+            <span class="estado">Web · soporte</span>
+          </div>
+          <h3>Mesa de ayuda y tickets</h3>
+          <p>Gestión de tickets de soporte con API y panel de atención.</p>
+          <ul class="logros">
+            <li>Registro, asignación y seguimiento de incidencias.</li>
+            <li>Esquema versionado con migraciones Flyway.</li>
+          </ul>
+          <ul class="etiquetas" aria-label="Tecnologías">
+            <li>Spring Boot 3</li><li>Java 21</li><li>PostgreSQL</li><li>Flyway</li><li>Angular 18</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="tecnologias">
+    <div class="envoltura">
+      <div class="seccion-cabeza">
+        <h2>Tecnologías</h2>
+        <p>Lo que uso a diario, lo que domino y lo que he llevado a producción. <strong>En negrita</strong>, mi base diaria.</p>
+      </div>
+      <div class="stack">
+        <div class="ancho">
+          <h3>Arquitectura de software</h3>
+          <ul><li><strong>Microservicios</strong></li><li><strong>Microfrontends · single-spa</strong></li><li>Monolito modular · Spring Modulith</li><li>API Gateway · Kong</li><li>Mensajería · RabbitMQ</li><li>Seguridad · OAuth2 · JWT</li><li>Integración e interoperabilidad entre entidades</li><li>Modelado de datos</li><li>Decisiones de arquitectura (ADR)</li></ul>
+        </div>
+        <div>
+          <h3>Backend</h3>
+          <ul><li><strong>Java 21</strong></li><li><strong>Spring Boot</strong></li><li>Spring Security · Data JPA</li><li>APIs REST · SOAP · OpenAPI</li><li>Python · FastAPI</li><li>Node.js · Express</li><li>PHP · Laravel</li><li>.NET · C#</li></ul>
+        </div>
+        <div>
+          <h3>Frontend</h3>
+          <ul><li><strong>Angular</strong></li><li><strong>TypeScript</strong></li><li>Angular SSR · signals</li><li>React · Next.js</li><li>Vue.js</li><li>Tailwind CSS · Bootstrap</li><li>SEO técnico · AMP</li></ul>
+        </div>
+        <div>
+          <h3>Móvil</h3>
+          <ul><li><strong>Flutter</strong></li><li>Kotlin · Android nativo</li><li>Apps Android e iOS</li><li>Firebase · OneSignal</li><li>Google Maps SDK</li><li>SQLite · modo sin conexión</li><li>AdMob</li></ul>
+        </div>
+        <div>
+          <h3>Inteligencia artificial</h3>
+          <ul><li><strong>LangChain · agentes</strong></li><li><strong>RAG</strong></li><li>OpenAI · GPT-4</li><li>Gemini · Vertex AI</li><li>Claude</li><li>Ollama · modelos locales</li><li>pgvector · Qdrant</li><li>OCR y análisis documental</li></ul>
+        </div>
+        <div>
+          <h3>Datos</h3>
+          <ul><li><strong>Oracle</strong></li><li><strong>PostgreSQL</strong></li><li><strong>SQL Server</strong></li><li>MySQL · MariaDB</li><li>MongoDB</li><li>Redis</li><li>Elasticsearch</li><li>Flyway · migraciones</li></ul>
+        </div>
+        <div>
+          <h3>DevOps y servidores</h3>
+          <ul><li><strong>Docker</strong></li><li><strong>Jenkins</strong></li><li>Kubernetes</li><li>GitLab CI · GitHub Actions</li><li>SonarQube</li><li>nginx · Let's Encrypt</li><li>Prometheus · Grafana · EFK</li><li>Servidores Linux · VPS</li></ul>
+        </div>
+        <div class="practicas">
+          <h3>Prácticas</h3>
+          <ul><li>Scrum</li><li>Git</li><li>Pruebas automatizadas · Testcontainers</li><li>Registros de decisiones de arquitectura (ADR)</li><li>Pases a producción</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="formacion">
+    <div class="envoltura">
+      <div class="seccion-cabeza">
+        <h2>Formación</h2>
+      </div>
+      <div class="formacion">
+        <div>
+          <span class="dato">Título profesional</span>
+          <strong>Ingeniería de Sistemas e Informática</strong>
+          <span>Universidad Tecnológica del Perú (UTP) · 2018 – 2022</span>
+        </div>
+        <div>
+          <span class="dato">Técnico</span>
+          <strong>Computación e Informática</strong>
+          <span>Instituto Superior Tecnológico y Científico ISATEC</span>
+        </div>
+        <div>
+          <span class="dato">Certificaciones</span>
+          <strong>Docker &amp; Networking · Node.js · Angular</strong>
+          <span>Udemy</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion contacto" id="contacto">
+    <div class="envoltura">
+      <div>
+        <p class="dato">Contacto</p>
+        <h2>Escríbeme si tu equipo necesita un perfil full stack senior</h2>
+        <p class="lead">Cuéntame el contexto: equipo, tecnologías y modalidad. Respondo por correo o por LinkedIn.</p>
+      </div>
+      <div class="canales">
+        <div class="canal">
+          <div>
+            <span class="dato">Correo</span>
+            <span class="valor" id="correo">belser.olivera@hotmail.com</span>
+          </div>
+          <button class="copiar" id="copiar-correo" type="button">Copiar</button>
+        </div>
+        <div class="canal">
+          <div>
+            <span class="dato">LinkedIn</span>
+            <a class="valor" href="https://www.linkedin.com/in/belserolivera/" target="_blank" rel="noopener">linkedin.com/in/belserolivera</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="envoltura">
+    <span class="dato">© 2026 Belser Olivera Vásquez</span>
+    <span class="dato">Última actualización: octubre de 2026</span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var filtros = document.querySelectorAll(".filtro");
+    var proyectos = document.querySelectorAll(".proyecto");
+    filtros.forEach(function (filtro) {
+      var area = filtro.dataset.filtro;
+      var total = area === "todos" ? proyectos.length
+        : Array.prototype.filter.call(proyectos, function (p) { return p.dataset.areas.split(" ").indexOf(area) !== -1; }).length;
+      if (total === 0) { filtro.parentElement.hidden = true; return; }
+      filtro.insertAdjacentHTML("beforeend", "<small>" + total + "</small>");
+      filtro.addEventListener("click", function () {
+        filtros.forEach(function (f) { f.setAttribute("aria-pressed", String(f === filtro)); });
+        proyectos.forEach(function (p) {
+          p.hidden = area !== "todos" && p.dataset.areas.split(" ").indexOf(area) === -1;
+        });
+      });
+    });
+  })();
+
+  (function () {
+    var boton = document.getElementById("copiar-correo");
+    var correo = document.getElementById("correo");
+    function avisar(texto) {
+      boton.textContent = texto;
+      setTimeout(function () { boton.textContent = "Copiar"; }, 1800);
+    }
+    function seleccionar() {
+      var rango = document.createRange();
+      rango.selectNodeContents(correo);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(rango);
+    }
+    boton.addEventListener("click", function () {
+      var texto = correo.textContent.trim();
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(texto).then(
+          function () { avisar("Copiado"); },
+          function () { seleccionar(); avisar("Selecciónalo"); }
+        );
+      } else {
+        seleccionar();
+        avisar("Selecciónalo");
+      }
+    });
+  })();
+</script>
+</body>
+</html>
